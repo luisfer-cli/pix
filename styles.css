@@ -105,7 +105,7 @@ h3 { font-size: 15px; line-height: 1.5; }
 .preview-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; place-items: center; min-height: 360px; padding: 28px 14px; overflow: hidden; background-color: #0d1733; background-image: linear-gradient(rgba(45,226,230,.15) 2px, transparent 2px), linear-gradient(90deg, rgba(45,226,230,.15) 2px, transparent 2px); background-size: 24px 24px; }
 .preview-grid::after { content: ""; position: absolute; left: 10%; right: 10%; bottom: 17%; height: 8px; background: rgba(0,0,0,.48); box-shadow: 0 8px 0 rgba(0,0,0,.25); }
 .preview-grid img { position: relative; z-index: 2; width: 100%; filter: drop-shadow(8px 8px 0 rgba(0,0,0,.35)); animation: float 1.4s steps(2, end) infinite; }
-.preview-grid .heart { animation-delay: .35s; }
+.preview-grid img:nth-of-type(2) { animation-delay: .35s; }
 @keyframes float { 50% { transform: translateY(-10px); } }
 .spark { position: absolute; z-index: 3; color: var(--yellow); font: 24px "Press Start 2P"; animation: blink 1.2s steps(2) infinite; }
 .s1 { top: 12%; left: 10%; }.s2 { top: 15%; right: 8%; color: var(--pink); }.s3 { right: 46%; bottom: 12%; color: var(--cyan); }

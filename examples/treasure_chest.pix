@@ -1,0 +1,76 @@
+canvas 32 32
+background transparent
+strict_palette true
+
+palette {
+    O #1c1917
+    D #78350f
+    W #b45309
+    G #f59e0b
+    Y #fde047
+    H #fef3c7
+}
+
+frame closed {
+    group chest at 4 5 {
+        rect 5 0 14 2 O
+        rect 2 2 20 3 O
+        rect 1 5 22 8 O
+        rect 0 13 24 10 O
+        rect 2 23 20 3 O
+        rect 4 2 16 2 W
+        rect 3 4 18 8 W
+        rect 2 6 20 5 D
+        rect 1 14 22 8 W
+        rect 3 16 18 5 D
+        rect 10 4 4 8 G
+        rect 9 12 6 8 G
+        rect 10 13 4 5 Y
+        rect 11 14 2 2 H
+        rect 3 22 18 2 G
+    }
+}
+
+frame open {
+    group chest at 4 3 {
+        rect 4 0 16 2 O
+        rect 2 2 20 3 O
+        rect 1 5 22 8 O
+        rect 3 6 18 5 W
+        rect 5 5 14 3 G
+        rect 8 8 8 4 Y
+        rect 0 12 24 11 O
+        rect 2 13 20 9 W
+        rect 4 15 16 6 D
+        rect 9 12 6 8 G
+        rect 10 13 4 5 Y
+        rect 11 14 2 2 H
+        rect 2 22 20 3 O
+    }
+}
+
+frame glow {
+    group chest at 4 2 {
+        rect 4 0 16 2 O
+        rect 2 2 20 3 O
+        rect 1 5 22 8 O
+        rect 3 6 18 5 W
+        rect 5 5 14 3 G
+        rect 7 8 10 4 Y
+        rect 9 6 6 3 H
+        rect 0 12 24 11 O
+        rect 2 13 20 9 W
+        rect 4 15 16 6 D
+        rect 9 12 6 8 G
+        rect 10 13 4 5 Y
+        rect 11 14 2 2 H
+        rect 2 22 20 3 O
+    }
+}
+
+animation unlock fps 4 {
+    closed
+    open
+    glow
+    open
+}

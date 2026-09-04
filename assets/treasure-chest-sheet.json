@@ -1,31 +1,31 @@
 {
   "frame_width": 128,
   "frame_height": 128,
-  "fps": 5,
+  "fps": 4,
   "frames": [
     {
-      "name": "pulse-1",
+      "name": "closed",
       "x": 0,
       "y": 0,
       "w": 128,
       "h": 128
     },
     {
-      "name": "pulse-2",
+      "name": "open",
       "x": 128,
       "y": 0,
       "w": 128,
       "h": 128
     },
     {
-      "name": "pulse-3",
+      "name": "glow",
       "x": 256,
       "y": 0,
       "w": 128,
       "h": 128
     },
     {
-      "name": "pulse-2",
+      "name": "open",
       "x": 384,
       "y": 0,
       "w": 128,

@@ -1,0 +1,40 @@
+canvas 32 32
+background transparent
+strict_palette true
+
+palette {
+    O #111827
+    S #334155
+    B #64748b
+    C #22d3ee
+    H #cffafe
+    Y #fde047
+    P #f472b6
+}
+
+group robot at 5 2 {
+    rect 10 0 3 4 O
+    rect 9 0 5 2 S
+    rect 5 3 13 3 O
+    rect 3 6 17 10 O
+    rect 1 9 3 7 O
+    rect 19 9 3 7 O
+    rect 5 16 13 9 O
+    rect 6 25 5 4 O
+    rect 13 25 5 4 O
+    rect 6 5 11 2 B
+    rect 4 7 15 8 B
+    rect 2 10 2 5 S
+    rect 19 10 2 5 S
+    rect 6 16 11 8 S
+    rect 7 26 3 2 B
+    rect 14 26 3 2 B
+    rect 7 9 3 3 C
+    rect 13 9 3 3 C
+    rect 8 9 2 2 H
+    rect 14 9 2 2 H
+    rect 9 18 5 4 C
+    rect 10 18 3 2 H
+    rect 5 14 13 2 Y
+    rect 11 5 2 2 P
+}

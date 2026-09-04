@@ -1,0 +1,82 @@
+canvas 32 32
+background transparent
+strict_palette true
+
+palette {
+    O #172554
+    S #2563eb
+    B #60a5fa
+    H #dbeafe
+    E #111827
+    P #f9a8d4
+}
+
+frame float-1 {
+    group ghost at 5 4 {
+        rect 8 0 7 2 O
+        rect 5 2 13 3 O
+        rect 3 5 17 4 O
+        rect 2 9 19 12 O
+        rect 3 21 5 5 O
+        rect 9 21 5 3 O
+        rect 15 21 5 5 O
+        rect 6 3 11 3 H
+        rect 4 6 15 4 H
+        rect 3 10 17 11 B
+        rect 4 20 4 3 B
+        rect 9 20 5 2 B
+        rect 15 20 4 3 B
+        rect 6 10 3 3 E
+        rect 14 10 3 3 E
+        rect 9 15 5 2 P
+    }
+}
+
+frame float-2 {
+    group ghost at 5 3 {
+        rect 8 0 7 2 O
+        rect 5 2 13 3 O
+        rect 3 5 17 4 O
+        rect 2 9 19 12 O
+        rect 3 21 5 3 O
+        rect 9 21 5 5 O
+        rect 15 21 5 3 O
+        rect 6 3 11 3 H
+        rect 4 6 15 4 H
+        rect 3 10 17 11 B
+        rect 4 20 4 2 B
+        rect 9 20 5 3 B
+        rect 15 20 4 2 B
+        rect 6 10 3 3 E
+        rect 14 10 3 3 E
+        rect 9 15 5 2 P
+    }
+}
+
+frame float-3 {
+    group ghost at 5 4 {
+        rect 8 0 7 2 O
+        rect 5 2 13 3 O
+        rect 3 5 17 4 O
+        rect 2 9 19 12 O
+        rect 3 21 5 5 O
+        rect 9 21 5 3 O
+        rect 15 21 5 5 O
+        rect 6 3 11 3 H
+        rect 4 6 15 4 H
+        rect 3 10 17 11 B
+        rect 4 20 4 3 B
+        rect 9 20 5 2 B
+        rect 15 20 4 3 B
+        rect 6 10 3 3 E
+        rect 14 10 3 3 E
+        rect 9 15 5 2 P
+    }
+}
+
+animation float fps 5 {
+    float-1
+    float-2
+    float-3
+    float-2
+}

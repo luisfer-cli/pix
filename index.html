@@ -55,8 +55,8 @@
       <div class="hero-art">
         <div class="window-bar"><span>PIX_PREVIEW.EXE</span><div><i></i><i></i><i></i></div></div>
         <div class="preview-grid">
-          <img class="golem" src="assets/crystal-golem-pulse.gif" alt="Animated crystal golem made with pix" />
-          <img class="heart" src="assets/arcade-heart-beat.gif" alt="Animated arcade heart made with pix" />
+          <img class="ghost" src="assets/sleepy-ghost-float.gif" alt="Animated sleepy ghost made with pix" />
+          <img class="chest" src="assets/treasure-chest-unlock.gif" alt="Animated treasure chest made with pix" />
           <span class="spark s1">✦</span><span class="spark s2">+</span><span class="spark s3">✦</span>
         </div>
         <div class="preview-footer"><span>32×32 PX</span><span>5 FPS</span><span>100% .PIX</span></div>
@@ -81,24 +81,24 @@
 
       <div class="gallery">
         <article class="art-card cyan large">
-          <div class="art-canvas"><img src="assets/neon-dragon.png" alt="Neon dragon pixel art" /></div>
-          <div class="card-copy"><span>01 / STATIC</span><h3>Neon Dragon</h3><a href="examples/neon_dragon.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
+          <div class="art-canvas"><img src="assets/magic-potion.png" alt="Magic potion pixel art" /></div>
+          <div class="card-copy"><span>01 / STATIC</span><h3>Magic Potion</h3><a href="examples/magic_potion.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
         </article>
         <article class="art-card violet">
-          <div class="art-canvas"><img src="assets/moon-witch-cat.png" alt="Moon witch cat pixel art" /></div>
-          <div class="card-copy"><span>02 / STATIC</span><h3>Moon Witch Cat</h3><a href="examples/moon_witch_cat.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
+          <div class="art-canvas"><img src="assets/forest-mushroom.png" alt="Forest mushroom pixel art" /></div>
+          <div class="card-copy"><span>02 / STATIC</span><h3>Forest Mushroom</h3><a href="examples/forest_mushroom.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
         </article>
         <article class="art-card orange">
-          <div class="art-canvas"><img src="assets/tiny-airship.png" alt="Tiny airship pixel art" /></div>
-          <div class="card-copy"><span>03 / STATIC</span><h3>Tiny Airship</h3><a href="examples/tiny_airship.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
+          <div class="art-canvas"><img src="assets/pocket-robot.png" alt="Pocket robot pixel art" /></div>
+          <div class="card-copy"><span>03 / STATIC</span><h3>Pocket Robot</h3><a href="examples/pocket_robot.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
         </article>
         <article class="art-card green">
-          <div class="art-canvas"><img src="assets/crystal-golem-pulse.gif" alt="Animated crystal golem" /></div>
-          <div class="card-copy"><span>04 / ANIMATED</span><h3>Crystal Golem</h3><a href="examples/crystal_golem.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
+          <div class="art-canvas"><img src="assets/sleepy-ghost-float.gif" alt="Animated sleepy ghost" /></div>
+          <div class="card-copy"><span>04 / ANIMATED</span><h3>Sleepy Ghost</h3><a href="examples/sleepy_ghost.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
         </article>
         <article class="art-card pink wide">
-          <div class="art-canvas"><img src="assets/arcade-heart-beat.gif" alt="Animated arcade heart" /></div>
-          <div class="card-copy"><span>05 / ANIMATED</span><h3>Arcade Heart</h3><a href="examples/arcade_heart.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
+          <div class="art-canvas"><img src="assets/treasure-chest-unlock.gif" alt="Animated treasure chest" /></div>
+          <div class="card-copy"><span>05 / ANIMATED</span><h3>Treasure Chest</h3><a href="examples/treasure_chest.pix" data-i18n="viewSource">Ver fuente .pix →</a></div>
         </article>
       </div>
     </section>
@@ -121,26 +121,27 @@
         <span class="eyebrow" data-i18n="sourceEyebrow">PIXEL ART LEGIBLE</span>
         <h2 data-i18n="sourceTitle">El dibujo también es código.</h2>
         <p data-i18n="sourceText">Guarda tus sprites en Git, revisa cambios línea a línea y regenera cada asset cuando quieras.</p>
-        <a href="examples/crystal_golem.pix" class="text-link" data-i18n="fullExample">Abrir ejemplo completo →</a>
+        <a href="examples/magic_potion.pix" class="text-link" data-i18n="fullExample">Abrir ejemplo completo →</a>
       </div>
       <div class="code-window">
-        <div class="code-title"><span>crystal_golem.pix</span><button type="button" data-copy="code-sample" data-i18n="copy">COPIAR</button></div>
+        <div class="code-title"><span>magic_potion.pix</span><button type="button" data-copy="code-sample" data-i18n="copy">COPIAR</button></div>
         <pre><code id="code-sample">canvas 32 32
 background transparent
 strict_palette true
 
 palette {
-    O #111827
-    C #06b6d4
-    H #cffafe
+    O #171329
+    B #7c3aed
+    P #ec4899
+    H #fbcfe8
 }
 
-frame pulse-1 {
-    group crystal at 10 8 {
-        rect 3 4 12 10 O
-        circle 9 7 3 C
-        pixel 8 6 H
-    }
+group potion at 6 2 {
+    rect 8 0 6 4 O
+    rect 3 10 16 15 O
+    rect 4 12 14 11 B
+    rect 4 17 14 6 P
+    rect 6 14 3 6 H
 }</code></pre>
       </div>
     </section>
@@ -150,9 +151,9 @@ frame pulse-1 {
         <div class="terminal-head"><span>TERMINAL</span><i></i><i></i></div>
         <div class="terminal-body">
           <p><span>$</span> cargo install --git https://github.com/luisfer-cli/pix</p>
-          <p><span>$</span> pix check examples/neon_dragon.pix</p>
-          <p><span>$</span> pix render examples/neon_dragon.pix -o dragon.png --scale 8</p>
-          <p><span>$</span> pix gif examples/crystal_golem.pix -a pulse -o golem.gif --scale 6</p>
+          <p><span>$</span> pix check examples/magic_potion.pix</p>
+          <p><span>$</span> pix render examples/magic_potion.pix -o potion.png --scale 8</p>
+          <p><span>$</span> pix gif examples/sleepy_ghost.pix -a float -o ghost.gif --scale 6</p>
           <p class="success" data-i18n="terminalSuccess">✓ LISTO — tus píxeles están vivos</p>
         </div>
       </div>

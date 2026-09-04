@@ -1,0 +1,34 @@
+canvas 32 32
+background transparent
+strict_palette true
+
+palette {
+    O #1c1917
+    D #9a3412
+    R #dc2626
+    P #fb7185
+    C #fef3c7
+    S #d6d3d1
+    B #78716c
+}
+
+group mushroom at 5 2 {
+    rect 7 0 8 2 O
+    rect 4 2 14 3 O
+    rect 2 5 18 3 O
+    rect 0 8 22 6 O
+    rect 3 14 16 3 O
+    rect 8 17 7 9 O
+    rect 6 25 11 3 O
+    rect 7 2 8 2 P
+    rect 5 4 12 3 R
+    rect 3 7 16 5 R
+    rect 1 10 20 3 D
+    rect 4 13 14 2 D
+    rect 8 4 4 3 C
+    rect 4 8 3 3 C
+    rect 15 8 3 3 C
+    rect 9 17 5 8 C
+    rect 7 25 9 2 S
+    rect 9 21 2 3 B
+}
