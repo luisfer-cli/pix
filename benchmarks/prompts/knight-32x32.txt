@@ -1,0 +1,1 @@
+Create a valid .pix file for a 32x32 knight character with head, torso, legs, armor, eyes, and outline. Use local coordinates and restricted palette.

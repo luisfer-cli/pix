@@ -1,0 +1,1 @@
+Create a .pix attack animation for a 32x32 character using a base frame and incremental derived frames. Move only named parts such as arm and weapon.

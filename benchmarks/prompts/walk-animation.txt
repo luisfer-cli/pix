@@ -1,0 +1,1 @@
+Create a .pix walk animation for a 32x32 character using a base idle frame and incremental derived frames. Keep all frames visually consistent.

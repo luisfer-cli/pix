@@ -1,0 +1,1 @@
+Create a valid .pix file for a 16x16 fantasy sword icon with outline, blade, hilt, and highlight. Prefer large shapes plus a few pixels.

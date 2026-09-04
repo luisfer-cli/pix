@@ -1,0 +1,1 @@
+Create a valid .pix file for a 32x32 spaceship with body, cockpit, wings, flame, outline, and highlights. Use symmetry when available.
