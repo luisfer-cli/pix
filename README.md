@@ -1,6 +1,6 @@
 # pix
 
-Deterministic pixel-art renderer for a small `.pix` DSL. It renders pixel-perfect PNGs with integer coordinates, palette validation, frames, animations, and spritesheet export.
+Deterministic pixel-art renderer for a small `.pix` DSL. It renders pixel-perfect PNGs and animated GIFs with integer coordinates, palette validation, frames, animations, and spritesheet export.
 
 ## Features
 
@@ -9,7 +9,7 @@ Deterministic pixel-art renderer for a small `.pix` DSL. It renders pixel-perfec
 - RGBA colors and named palettes
 - Groups with local coordinates
 - Validation, formatting, AST inspection, and spec output
-- Animation frames and spritesheet metadata JSON
+- Animation frames, animated GIFs, and spritesheet metadata JSON
 
 ## Install
 
@@ -84,6 +84,12 @@ Export animation frames as PNG files:
 
 ```bash
 pix anim examples/slime_anim.pix -a idle --out-dir output/slime-idle
+```
+
+Export an animated GIF:
+
+```bash
+pix gif examples/slime_anim.pix -a idle -o output/slime-idle.gif
 ```
 
 Export a spritesheet and metadata:

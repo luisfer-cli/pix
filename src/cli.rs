@@ -60,6 +60,16 @@ enum Command {
         #[arg(long, default_value_t = 1)]
         scale: u32,
     },
+    /// Export an animation as an animated GIF
+    Gif {
+        input: Option<PathBuf>,
+        #[arg(short, long)]
+        animation: String,
+        #[arg(short, long)]
+        output: PathBuf,
+        #[arg(long, default_value_t = 1)]
+        scale: u32,
+    },
     /// Export an animation as a spritesheet PNG
     Sheet {
         input: Option<PathBuf>,
@@ -184,6 +194,25 @@ pub fn run() -> Result<(), Box<dyn std::error::Error>> {
                         let path = out_dir.join(format!("{animation}-{i:03}-{frame_name}.png"));
                         canvas.save_png(&path, scale)?;
                     }
+                    Ok(())
+                }
+                Err(errors) => {
+                    emit_errors(&errors, &name, &src, false)?;
+                    std::process::exit(1);
+                }
+            }
+        }
+        Command::Gif {
+            input,
+            animation,
+            output,
+            scale,
+        } => {
+            let (src, name) = source::read_input(input.as_deref())?;
+            match parse_and_validate(&src) {
+                Ok(doc) => {
+                    let (fps, frames) = render::render_animation(&doc, &animation)?;
+                    render::save_gif(&frames, &output, scale, fps)?;
                     Ok(())
                 }
                 Err(errors) => {

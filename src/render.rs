@@ -2,9 +2,11 @@ use crate::ast::{AnimationFrame, Item, Spanned, Stmt};
 use crate::color::{Rgba, resolve_color};
 use crate::diagnostics::Diagnostic;
 use crate::validate::ValidDocument;
-use image::{ImageBuffer, ImageError};
+use image::codecs::gif::{GifEncoder, Repeat};
+use image::{Delay, Frame, ImageBuffer, ImageError};
 use serde::Serialize;
 use std::collections::VecDeque;
+use std::fs::File;
 use std::path::Path;
 
 pub struct Canvas {
@@ -54,6 +56,10 @@ impl Canvas {
         self.idx(x, y).map(|i| self.pixels[i])
     }
     pub fn save_png(&self, path: &Path, scale: u32) -> Result<(), ImageError> {
+        self.to_image(scale).save(path)
+    }
+
+    fn to_image(&self, scale: u32) -> ImageBuffer<image::Rgba<u8>, Vec<u8>> {
         let scale = scale.max(1);
         let w = self.width * scale;
         let h = self.height * scale;
@@ -64,7 +70,7 @@ impl Canvas {
                 img.put_pixel(x, y, image::Rgba([p.r, p.g, p.b, p.a]));
             }
         }
-        img.save(path)
+        img
     }
 }
 
@@ -125,6 +131,31 @@ pub fn render_animation(
         rendered.push((frame.name.clone(), render_frame(doc, &frame.name)?));
     }
     Ok((fps, rendered))
+}
+
+pub fn save_gif(
+    frames: &[(String, Canvas)],
+    path: &Path,
+    scale: u32,
+    fps: i32,
+) -> Result<(), ImageError> {
+    if frames.is_empty() {
+        return Ok(());
+    }
+
+    let delay_ms = (1000 / fps.max(1) as u32).max(1);
+    let file = File::create(path)?;
+    let mut encoder = GifEncoder::new(file);
+    encoder.set_repeat(Repeat::Infinite)?;
+    for (_, canvas) in frames {
+        encoder.encode_frame(Frame::from_parts(
+            canvas.to_image(scale),
+            0,
+            0,
+            Delay::from_numer_denom_ms(delay_ms, 1),
+        ))?;
+    }
+    Ok(())
 }
 
 pub fn save_spritesheet(
