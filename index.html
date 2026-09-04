@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>pix · Pixel art as code</title>
+  <meta name="description" content="pix es un renderer determinista de pixel art para una DSL .pix: PNGs, GIFs animados, spritesheets y paletas validadas." />
+  <meta property="og:title" content="pix · Pixel art as code" />
+  <meta property="og:description" content="Crea pixel art perfecto, reproducible y animado con una DSL pequeña y bonita." />
+  <meta property="og:image" content="assets/slime-showcase-walk.gif" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="pix inicio"><span class="logo">px</span><span>pix</span></a>
+    <nav>
+      <a href="#features">Funciones</a>
+      <a href="#gallery">Galería</a>
+      <a href="#dsl">DSL</a>
+      <a class="pill" href="https://github.com/luisfer-cli/pix">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">Pixel art reproducible · Rust · .pix DSL</p>
+        <h1>Dibuja sprites como código. Exporta magia pixel-perfect.</h1>
+        <p class="lead">pix convierte una DSL mínima en PNGs nítidos, GIFs animados y spritesheets con metadata. Sin antialiasing, sin sorpresas: arte determinista listo para juegos, docs y prototipos.</p>
+        <div class="actions">
+          <a class="button primary" href="#start">Empezar</a>
+          <a class="button ghost" href="#gallery">Ver ejemplos</a>
+        </div>
+        <div class="stats" aria-label="capacidades de pix">
+          <span><strong>PNG</strong> estático</span>
+          <span><strong>GIF</strong> animado</span>
+          <span><strong>JSON</strong> spritesheet</span>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="preview animado de pix">
+        <div class="screen-grid">
+          <img class="hero-sprite" src="assets/slime-showcase-walk.gif" alt="slime animado caminando" />
+          <img class="hero-sprite delay" src="assets/slime-showcase-jump.gif" alt="slime animado saltando" />
+          <img class="hero-sprite" src="assets/slime-showcase-idle.gif" alt="slime animado idle" />
+        </div>
+        <div class="terminal">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <code>pix gif examples/slime_showcase.pix -a walk -o slime.gif</code>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section cards">
+      <article><span class="icon">◆</span><h2>Determinista</h2><p>Coordenadas enteras, colores RGBA y render sin antialiasing para resultados idénticos cada vez.</p></article>
+      <article><span class="icon">▣</span><h2>Paletas seguras</h2><p>Define colores con nombres y activa <code>strict_palette</code> para evitar tonos accidentales.</p></article>
+      <article><span class="icon">▶</span><h2>Animaciones</h2><p>Describe frames, fps y secuencias; exporta GIFs, frames PNG o spritesheets con JSON.</p></article>
+      <article><span class="icon">⌁</span><h2>Componible</h2><p>Usa grupos con coordenadas locales para crear sprites legibles, reutilizables y fáciles de revisar.</p></article>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-title"><p class="eyebrow">Showcase</p><h2>Ejemplos ultrabonitos generados con pix</h2></div>
+      <div class="gallery">
+        <figure><img src="assets/knight.png" alt="caballero pixel art"/><figcaption>Caballero</figcaption></figure>
+        <figure><img src="assets/spaceship.png" alt="nave espacial pixel art"/><figcaption>Nave espacial</figcaption></figure>
+        <figure><img src="assets/tree.png" alt="árbol pixel art"/><figcaption>Árbol</figcaption></figure>
+        <figure><img src="assets/sword.png" alt="espada pixel art"/><figcaption>Espada</figcaption></figure>
+        <figure><img src="assets/slime-showcase-walk.gif" alt="slime caminando"/><figcaption>Walk GIF</figcaption></figure>
+        <figure><img src="assets/slime-showcase-walk-sheet.png" alt="spritesheet de slime"/><figcaption>Spritesheet</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="dsl" class="section split">
+      <div>
+        <p class="eyebrow">Código que dibuja</p>
+        <h2>Una DSL pequeña, expresiva y fácil de versionar</h2>
+        <p>Los sprites viven en archivos <code>.pix</code>, así que puedes revisarlos en pull requests, formatearlos, validarlos y regenerarlos en CI.</p>
+      </div>
+      <pre class="code"><button class="copy" data-copy="code-sample">Copiar</button><code id="code-sample">canvas 16 16
+background transparent
+strict_palette true
+
+palette {
+    O #181425
+    G #3fa34d
+    L #7bd88f
+}
+
+frame idle-1 {
+    group slime at 3 5 {
+        rect 0 1 10 5 G
+        pixel 2 2 O
+        pixel 7 2 O
+        circle 5 3 2 L
+    }
+}</code></pre>
+    </section>
+
+    <section id="start" class="section start">
+      <div class="section-title"><p class="eyebrow">Instalación</p><h2>Empieza en segundos</h2></div>
+      <div class="commands">
+        <code>cargo install --path .</code>
+        <code>pix check examples/slime_anim.pix</code>
+        <code>pix render examples/slime.pix -o output/slime.png</code>
+        <code>pix sheet examples/slime_anim.pix -a idle -o sheet.png --json sheet.json</code>
+      </div>
+      <a class="button primary" href="https://github.com/luisfer-cli/pix">Ver el repositorio</a>
+    </section>
+  </main>
+
+  <footer>Hecho con <strong>pix</strong> · pixel art as code · <a href="https://github.com/luisfer-cli/pix">github.com/luisfer-cli/pix</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>

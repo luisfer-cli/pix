@@ -1,0 +1,29 @@
+canvas 32 32
+background transparent
+strict_palette true
+
+palette {
+    O #181425
+    T #8b5a2b
+    D #5c3a21
+    G #2f8f46
+    L #65c96f
+    S #1f5c35
+}
+
+group trunk at 13 16 {
+    rect 1 0 4 12 T
+    rect 0 6 6 6 D
+    line 3 0 3 11 O
+    line 0 11 5 11 O
+}
+
+group crown at 6 3 {
+    circle 10 8 8 G
+    circle 5 10 5 S
+    circle 15 10 5 L
+    rect 5 12 12 6 G
+    pixel 7 5 L
+    pixel 14 6 L
+    pixel 4 13 S
+}

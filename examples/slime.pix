@@ -1,0 +1,16 @@
+canvas 16 16
+background transparent
+strict_palette true
+
+palette {
+    O #181425
+    G #3fa34d
+    L #7bd88f
+}
+
+group slime at 3 5 {
+    rect 0 1 10 5 G
+    pixel 2 2 O
+    pixel 7 2 O
+    circle 5 3 2 L
+}

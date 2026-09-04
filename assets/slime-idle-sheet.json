@@ -1,0 +1,21 @@
+{
+  "frame_width": 16,
+  "frame_height": 16,
+  "fps": 6,
+  "frames": [
+    {
+      "name": "idle-1",
+      "x": 0,
+      "y": 0,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "name": "idle-2",
+      "x": 16,
+      "y": 0,
+      "w": 16,
+      "h": 16
+    }
+  ]
+}
