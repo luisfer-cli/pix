@@ -4,69 +4,35 @@ strict_palette true
 
 palette {
     O #111827
-    D #0f3d3e
-    B #146c72
-    M #22d3ee
-    H #a7f3ff
+    S #164e63
+    B #0e7490
+    C #22d3ee
+    H #cffafe
     P #f472b6
-    Y #facc15
-    SH #00000055
 }
 
-group shadow at 6 28 {
-    rect 0 0 20 2 SH
-    rect 4 2 12 1 SH
-}
-
-group tail at 4 16 {
-    line 0 8 5 5 O
-    line 1 7 6 4 B
-    line 6 4 10 6 B
-    line 10 6 14 3 M
-    pixel 13 2 H
-}
-
-group wing_back at 7 6 {
-    line 6 9 2 1 O
-    line 6 9 12 2 O
-    line 3 2 5 12 D
-    line 11 3 9 12 D
-    rect 5 7 4 3 B
-    pixel 6 5 M
-    pixel 9 6 M
-}
-
-group body at 9 12 {
-    rect 2 4 13 8 O
-    rect 3 3 11 9 B
-    rect 5 2 7 9 M
-    rect 5 10 8 2 D
-    pixel 8 4 H
-    pixel 10 5 H
-    line 4 12 2 17 O
-    line 12 12 15 17 O
-    rect 1 17 5 2 D
-    rect 13 17 5 2 D
-}
-
-group head at 17 7 {
-    rect 0 4 10 8 O
-    rect 1 3 8 8 B
-    rect 3 2 5 7 M
-    line 1 3 0 0 O
-    line 7 3 10 0 O
-    pixel 0 0 Y
-    pixel 10 0 Y
-    rect 6 5 2 2 P
-    pixel 7 5 H
-    rect 2 8 5 1 O
-    pixel 9 10 H
-}
-
-group sparks at 3 4 {
-    pixel 0 0 P
-    pixel 25 2 H
-    pixel 23 7 Y
-    pixel 1 15 M
-    pixel 27 18 P
+group dragon at 3 3 {
+    rect 11 2 5 3 B
+    rect 9 5 9 4 B
+    rect 7 8 14 10 B
+    rect 9 18 11 6 B
+    rect 13 24 6 3 B
+    rect 5 11 4 6 S
+    rect 3 14 4 4 S
+    rect 19 7 6 6 B
+    rect 23 9 3 3 B
+    rect 9 5 4 2 C
+    rect 10 4 3 3 C
+    rect 8 7 7 5 C
+    rect 9 12 8 5 C
+    rect 11 17 8 3 C
+    rect 19 8 3 3 C
+    rect 21 10 3 2 C
+    rect 15 8 3 2 H
+    rect 19 9 2 2 H
+    rect 7 6 3 3 P
+    rect 5 9 3 3 P
+    rect 5 17 4 2 P
+    rect 18 16 4 3 S
+    rect 21 18 3 3 S
 }

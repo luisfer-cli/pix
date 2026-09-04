@@ -3,68 +3,44 @@ background transparent
 strict_palette true
 
 palette {
-    O #140f1f
-    D #7f1d1d
+    O #111827
+    D #991b1b
     R #ef4444
     P #fb7185
     H #fecdd3
-    Y #facc15
-    V #8b5cf6
-    SH #00000055
 }
 
 frame beat-1 {
-    group shadow at 7 27 {
-        rect 0 0 18 2 SH
-    }
-    group heart at 7 7 {
-        rect 3 2 6 4 O
-        rect 12 2 6 4 O
-        rect 1 5 20 8 O
-        rect 3 13 16 4 O
-        rect 6 17 10 4 O
-        rect 9 21 4 2 O
-        rect 4 3 4 3 P
-        rect 13 3 4 3 R
-        rect 2 6 18 7 R
-        rect 4 13 14 3 D
-        rect 7 16 8 4 D
-        pixel 5 5 H
-        rect 7 6 3 1 H
-        pixel 17 7 P
-    }
-    group shine at 3 3 {
-        pixel 0 0 Y
-        pixel 25 2 V
-        pixel 24 20 Y
+    group heart at 5 5 {
+        rect 4 0 6 3 O
+        rect 13 0 6 3 O
+        rect 2 3 20 10 O
+        rect 4 13 16 5 O
+        rect 7 18 10 4 O
+        rect 10 22 4 2 O
+        rect 5 1 4 2 P
+        rect 14 1 4 2 R
+        rect 3 4 18 8 R
+        rect 5 12 14 4 D
+        rect 8 16 8 4 D
+        rect 7 4 4 2 H
     }
 }
 
 frame beat-2 {
-    group shadow at 5 28 {
-        rect 0 0 22 2 SH
-    }
-    group heart at 5 5 {
-        rect 4 2 7 5 O
-        rect 15 2 7 5 O
-        rect 1 6 24 10 O
-        rect 3 16 20 5 O
-        rect 7 21 12 4 O
-        rect 11 25 4 2 O
-        rect 5 3 5 4 P
-        rect 16 3 5 4 R
-        rect 2 7 22 8 R
-        rect 5 16 16 4 D
-        rect 8 20 10 4 D
-        pixel 6 5 H
-        rect 8 6 4 1 H
-        pixel 20 8 P
-    }
-    group shine at 3 3 {
-        pixel 0 0 Y
-        pixel 25 2 V
-        pixel 24 20 Y
-        pixel 27 16 H
+    group heart at 3 3 {
+        rect 5 0 7 3 O
+        rect 15 0 7 3 O
+        rect 2 3 23 11 O
+        rect 4 14 19 5 O
+        rect 8 19 11 4 O
+        rect 11 23 5 3 O
+        rect 6 1 5 2 P
+        rect 16 1 5 2 R
+        rect 3 4 21 9 R
+        rect 5 13 17 4 D
+        rect 9 17 9 4 D
+        rect 8 4 5 2 H
     }
 }
 
