@@ -1,0 +1,57 @@
+canvas 32 32
+background transparent
+strict_palette true
+
+palette {
+    O #17131f
+    H #f8fafc
+    C #f59e0b
+    D #b45309
+    R #ef4444
+    B #38bdf8
+    S #94a3b8
+    W #e0f2fe
+    SH #00000055
+}
+
+group cloud at 2 22 {
+    rect 0 4 28 3 SH
+    circle 5 4 3 W
+    circle 11 3 4 W
+    circle 18 4 3 W
+    rect 5 5 16 3 W
+}
+
+group balloon at 5 3 {
+    rect 4 2 16 8 O
+    rect 2 5 20 8 O
+    rect 4 13 16 4 O
+    rect 5 3 14 7 C
+    rect 3 6 18 6 C
+    rect 5 13 14 3 D
+    rect 8 4 3 12 H
+    rect 14 4 3 12 R
+    pixel 6 5 W
+    pixel 7 6 W
+}
+
+group ropes at 10 18 {
+    line 0 0 2 5 O
+    line 11 0 9 5 O
+}
+
+group gondola at 9 22 {
+    rect 1 0 14 5 O
+    rect 2 1 12 4 D
+    rect 4 1 2 2 B
+    rect 9 1 2 2 B
+    rect 0 4 16 2 O
+    pixel 13 2 S
+}
+
+group propeller at 24 22 {
+    rect 0 2 4 2 O
+    pixel 4 1 S
+    pixel 5 2 S
+    pixel 4 3 S
+}

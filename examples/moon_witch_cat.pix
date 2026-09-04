@@ -1,0 +1,67 @@
+canvas 32 32
+background transparent
+strict_palette true
+
+palette {
+    O #0b1020
+    F #111827
+    P #312e81
+    V #7c3aed
+    L #c4b5fd
+    Y #fde68a
+    E #34d399
+    R #fb7185
+    SH #00000055
+}
+
+group moon at 20 3 {
+    circle 3 3 5 Y
+    circle 1 2 4 #0b1020
+}
+
+group shadow at 8 27 {
+    rect 0 0 16 2 SH
+    rect 4 2 8 1 SH
+}
+
+group hat at 7 4 {
+    line 8 0 2 12 O
+    line 8 0 16 12 O
+    rect 1 12 17 3 O
+    line 8 2 4 12 V
+    line 8 2 13 12 P
+    rect 5 9 7 3 V
+    rect 10 11 4 1 L
+    rect 0 14 20 2 P
+    pixel 8 4 L
+}
+
+group cat at 9 13 {
+    rect 3 4 12 10 O
+    rect 4 3 10 10 F
+    line 4 3 2 0 O
+    line 13 3 16 0 O
+    pixel 3 1 F
+    pixel 15 1 F
+    rect 6 7 2 2 E
+    rect 11 7 2 2 E
+    pixel 7 7 Y
+    pixel 12 7 Y
+    pixel 9 10 R
+    rect 8 12 3 1 L
+    line 14 11 20 8 O
+    line 15 11 21 7 F
+    pixel 20 7 L
+    rect 4 14 3 4 O
+    rect 11 14 3 4 O
+    pixel 5 18 F
+    pixel 12 18 F
+}
+
+group stars at 2 2 {
+    pixel 0 4 L
+    pixel 3 0 Y
+    pixel 25 10 L
+    pixel 27 18 Y
+    pixel 1 22 V
+}

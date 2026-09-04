@@ -1,0 +1,128 @@
+canvas 32 32
+background transparent
+strict_palette true
+
+palette {
+    O #111827
+    R #334155
+    S #64748b
+    C #06b6d4
+    B #0891b2
+    H #cffafe
+    P #a78bfa
+    SH #00000055
+}
+
+frame pulse-1 {
+    group shadow at 6 28 {
+        rect 0 0 20 2 SH
+    }
+    group legs at 9 21 {
+        rect 2 0 5 8 O
+        rect 12 0 5 8 O
+        rect 3 0 4 7 R
+        rect 12 0 4 7 R
+    }
+    group body at 7 10 {
+        rect 3 4 18 11 O
+        rect 4 3 16 11 R
+        rect 6 2 12 10 S
+        circle 12 7 3 C
+        pixel 11 6 H
+    }
+    group head at 10 4 {
+        rect 3 3 12 8 O
+        rect 4 2 10 8 R
+        rect 6 1 6 7 S
+        pixel 6 6 C
+        pixel 11 6 C
+        rect 8 8 3 1 O
+    }
+    group crystals at 5 5 {
+        line 0 10 5 0 O
+        line 1 10 5 1 B
+        line 22 11 17 1 O
+        line 21 11 17 2 B
+        pixel 5 1 H
+        pixel 17 2 H
+    }
+}
+
+frame pulse-2 {
+    group shadow at 5 28 {
+        rect 0 0 22 2 SH
+    }
+    group legs at 9 21 {
+        rect 2 0 5 8 O
+        rect 12 0 5 8 O
+        rect 3 0 4 7 R
+        rect 12 0 4 7 R
+    }
+    group body at 6 9 {
+        rect 3 4 20 12 O
+        rect 4 3 18 12 R
+        rect 7 2 12 11 S
+        circle 13 8 4 C
+        pixel 12 6 H
+        pixel 14 9 H
+    }
+    group head at 10 3 {
+        rect 3 3 12 8 O
+        rect 4 2 10 8 R
+        rect 6 1 6 7 S
+        pixel 6 6 H
+        pixel 11 6 H
+        rect 8 8 3 1 O
+    }
+    group crystals at 4 4 {
+        line 0 12 6 0 O
+        line 1 12 6 1 C
+        line 24 12 18 0 O
+        line 23 12 18 1 C
+        pixel 6 1 H
+        pixel 18 1 H
+        pixel 15 0 P
+    }
+}
+
+frame pulse-3 {
+    group shadow at 6 28 {
+        rect 0 0 20 2 SH
+    }
+    group legs at 9 21 {
+        rect 2 0 5 8 O
+        rect 12 0 5 8 O
+        rect 3 0 4 7 R
+        rect 12 0 4 7 R
+    }
+    group body at 7 10 {
+        rect 3 4 18 11 O
+        rect 4 3 16 11 R
+        rect 6 2 12 10 S
+        circle 12 7 3 B
+        pixel 11 6 H
+    }
+    group head at 10 4 {
+        rect 3 3 12 8 O
+        rect 4 2 10 8 R
+        rect 6 1 6 7 S
+        pixel 6 6 C
+        pixel 11 6 C
+        rect 8 8 3 1 O
+    }
+    group crystals at 5 5 {
+        line 0 10 5 0 O
+        line 1 10 5 1 B
+        line 22 11 17 1 O
+        line 21 11 17 2 B
+        pixel 5 1 H
+        pixel 17 2 H
+    }
+}
+
+animation pulse fps 5 {
+    pulse-1
+    pulse-2
+    pulse-3
+    pulse-2
+}

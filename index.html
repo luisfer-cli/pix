@@ -3,114 +3,116 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>pix · Pixel art as code</title>
-  <meta name="description" content="pix es un renderer determinista de pixel art para una DSL .pix: PNGs, GIFs animados, spritesheets y paletas validadas." />
-  <meta property="og:title" content="pix · Pixel art as code" />
-  <meta property="og:description" content="Crea pixel art perfecto, reproducible y animado con una DSL pequeña y bonita." />
-  <meta property="og:image" content="assets/slime-showcase-walk.gif" />
-  <meta name="theme-color" content="#0b1020" />
+  <title>pix · pixel art as code</title>
+  <meta name="description" content="pix convierte una DSL .pix en sprites PNG, GIFs animados y spritesheets pixel-perfect." />
+  <meta property="og:title" content="pix · pixel art as code" />
+  <meta property="og:description" content="Pixel art determinista, bonito y versionable con una DSL pequeña." />
+  <meta property="og:image" content="assets/crystal-golem-pulse.gif" />
+  <meta name="theme-color" content="#17131f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <header class="nav">
-    <a class="brand" href="#top" aria-label="pix inicio"><span class="logo">px</span><span>pix</span></a>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-icon">PIX</span><span>pix</span></a>
     <nav>
-      <a href="#features">Funciones</a>
-      <a href="#gallery">Galería</a>
-      <a href="#dsl">DSL</a>
-      <a class="pill" href="https://github.com/luisfer-cli/pix">GitHub</a>
+      <a href="#gallery">sprites</a>
+      <a href="#dsl">dsl</a>
+      <a href="#commands">cli</a>
+      <a class="coin" href="https://github.com/luisfer-cli/pix">github</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero section">
-      <div class="hero-copy">
-        <p class="eyebrow">Pixel art reproducible · Rust · .pix DSL</p>
-        <h1>Dibuja sprites como código. Exporta magia pixel-perfect.</h1>
-        <p class="lead">pix convierte una DSL mínima en PNGs nítidos, GIFs animados y spritesheets con metadata. Sin antialiasing, sin sorpresas: arte determinista listo para juegos, docs y prototipos.</p>
-        <div class="actions">
-          <a class="button primary" href="#start">Empezar</a>
-          <a class="button ghost" href="#gallery">Ver ejemplos</a>
-        </div>
-        <div class="stats" aria-label="capacidades de pix">
-          <span><strong>PNG</strong> estático</span>
-          <span><strong>GIF</strong> animado</span>
-          <span><strong>JSON</strong> spritesheet</span>
+    <section class="hero frame">
+      <div class="hero-text">
+        <p class="kicker">RUST POWERED // PIXEL PERFECT</p>
+        <h1>Pixel art como código</h1>
+        <p class="lead">Escribe sprites en <strong>.pix</strong>, valida paletas estrictas y exporta PNGs, GIFs y spritesheets nítidos para juegos, docs y prototipos.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#gallery">ver galería</a>
+          <a class="btn" href="#dsl">copiar ejemplo</a>
         </div>
       </div>
-      <div class="hero-card" aria-label="preview animado de pix">
-        <div class="screen-grid">
-          <img class="hero-sprite" src="assets/slime-showcase-walk.gif" alt="slime animado caminando" />
-          <img class="hero-sprite delay" src="assets/slime-showcase-jump.gif" alt="slime animado saltando" />
-          <img class="hero-sprite" src="assets/slime-showcase-idle.gif" alt="slime animado idle" />
+      <div class="arcade-screen" aria-label="sprites animados generados con pix">
+        <div class="screen-header"><span></span><span></span><span></span></div>
+        <div class="sprite-stage">
+          <img src="assets/crystal-golem-pulse.gif" alt="gólem de cristal animado" />
+          <img src="assets/arcade-heart-beat.gif" alt="corazón arcade animado" />
         </div>
-        <div class="terminal">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <code>pix gif examples/slime_showcase.pix -a walk -o slime.gif</code>
-        </div>
+        <p class="caption">new showcase generated with the pix DSL</p>
       </div>
     </section>
 
-    <section id="features" class="section cards">
-      <article><span class="icon">◆</span><h2>Determinista</h2><p>Coordenadas enteras, colores RGBA y render sin antialiasing para resultados idénticos cada vez.</p></article>
-      <article><span class="icon">▣</span><h2>Paletas seguras</h2><p>Define colores con nombres y activa <code>strict_palette</code> para evitar tonos accidentales.</p></article>
-      <article><span class="icon">▶</span><h2>Animaciones</h2><p>Describe frames, fps y secuencias; exporta GIFs, frames PNG o spritesheets con JSON.</p></article>
-      <article><span class="icon">⌁</span><h2>Componible</h2><p>Usa grupos con coordenadas locales para crear sprites legibles, reutilizables y fáciles de revisar.</p></article>
+    <section class="marquee" aria-label="capacidades">
+      <span>NO ANTIALIASING</span><span>STRICT PALETTES</span><span>GIF EXPORT</span><span>SPRITESHEETS</span><span>VERSIONABLE ART</span>
     </section>
 
     <section id="gallery" class="section">
-      <div class="section-title"><p class="eyebrow">Showcase</p><h2>Ejemplos ultrabonitos generados con pix</h2></div>
+      <div class="section-head">
+        <p class="kicker">LEVEL 01</p>
+        <h2>Nuevos ejemplos</h2>
+      </div>
       <div class="gallery">
-        <figure><img src="assets/knight.png" alt="caballero pixel art"/><figcaption>Caballero</figcaption></figure>
-        <figure><img src="assets/spaceship.png" alt="nave espacial pixel art"/><figcaption>Nave espacial</figcaption></figure>
-        <figure><img src="assets/tree.png" alt="árbol pixel art"/><figcaption>Árbol</figcaption></figure>
-        <figure><img src="assets/sword.png" alt="espada pixel art"/><figcaption>Espada</figcaption></figure>
-        <figure><img src="assets/slime-showcase-walk.gif" alt="slime caminando"/><figcaption>Walk GIF</figcaption></figure>
-        <figure><img src="assets/slime-showcase-walk-sheet.png" alt="spritesheet de slime"/><figcaption>Spritesheet</figcaption></figure>
+        <article class="card big"><img src="assets/neon-dragon.png" alt="dragón neón pixel art" /><h3>Neon Dragon</h3><p>Silueta fuerte, cyan eléctrico y acentos magenta.</p><a href="examples/neon_dragon.pix">.pix</a></article>
+        <article class="card"><img src="assets/moon-witch-cat.png" alt="gato brujo bajo la luna" /><h3>Moon Witch Cat</h3><p>Sombrero, luna mordida y ojos verdes.</p><a href="examples/moon_witch_cat.pix">.pix</a></article>
+        <article class="card"><img src="assets/tiny-airship.png" alt="mini dirigible pixel art" /><h3>Tiny Airship</h3><p>Dirigible retro sobre nubes chunky.</p><a href="examples/tiny_airship.pix">.pix</a></article>
+        <article class="card"><img src="assets/crystal-golem-pulse.gif" alt="gólem de cristal pulsando" /><h3>Crystal Golem</h3><p>Animación pulse + spritesheet JSON.</p><a href="examples/crystal_golem.pix">.pix</a></article>
+        <article class="card"><img src="assets/arcade-heart-beat.gif" alt="corazón arcade latiendo" /><h3>Arcade Heart</h3><p>Beat en 2 poses con brillos de pickup.</p><a href="examples/arcade_heart.pix">.pix</a></article>
+        <article class="card sheet"><img src="assets/crystal-golem-sheet.png" alt="spritesheet de crystal golem" /><h3>Sprite Sheet</h3><p>Frames ordenados para engines.</p><a href="assets/crystal-golem-sheet.json">json</a></article>
       </div>
     </section>
 
-    <section id="dsl" class="section split">
+    <section id="dsl" class="section two-col">
       <div>
-        <p class="eyebrow">Código que dibuja</p>
-        <h2>Una DSL pequeña, expresiva y fácil de versionar</h2>
-        <p>Los sprites viven en archivos <code>.pix</code>, así que puedes revisarlos en pull requests, formatearlos, validarlos y regenerarlos en CI.</p>
+        <p class="kicker">LEVEL 02</p>
+        <h2>Una DSL pequeña para sprites legibles</h2>
+        <p class="lead small">Los assets se revisan como texto, usan coordenadas enteras y se renderizan siempre igual. Ideal para repos, CI y documentación visual.</p>
       </div>
-      <pre class="code"><button class="copy" data-copy="code-sample">Copiar</button><code id="code-sample">canvas 16 16
+      <pre class="code-window"><button class="copy" data-copy="code-sample">copy</button><code id="code-sample">canvas 32 32
 background transparent
 strict_palette true
 
 palette {
-    O #181425
-    G #3fa34d
-    L #7bd88f
+    O #111827
+    C #06b6d4
+    H #cffafe
 }
 
-frame idle-1 {
-    group slime at 3 5 {
-        rect 0 1 10 5 G
-        pixel 2 2 O
-        pixel 7 2 O
-        circle 5 3 2 L
+frame pulse-1 {
+    group crystal at 10 8 {
+        rect 3 4 12 10 O
+        circle 9 7 3 C
+        pixel 8 6 H
     }
+}
+
+animation pulse fps 5 {
+    pulse-1
 }</code></pre>
     </section>
 
-    <section id="start" class="section start">
-      <div class="section-title"><p class="eyebrow">Instalación</p><h2>Empieza en segundos</h2></div>
+    <section id="commands" class="section console frame">
+      <p class="kicker">LEVEL 03</p>
+      <h2>Comandos rápidos</h2>
       <div class="commands">
         <code>cargo install --path .</code>
-        <code>pix check examples/slime_anim.pix</code>
-        <code>pix render examples/slime.pix -o output/slime.png</code>
-        <code>pix sheet examples/slime_anim.pix -a idle -o sheet.png --json sheet.json</code>
+        <code>pix check examples/neon_dragon.pix</code>
+        <code>pix render examples/neon_dragon.pix -o dragon.png --scale 8</code>
+        <code>pix gif examples/crystal_golem.pix -a pulse -o golem.gif --scale 6</code>
+        <code>pix sheet examples/arcade_heart.pix -a beat -o heart-sheet.png --json heart.json</code>
       </div>
-      <a class="button primary" href="https://github.com/luisfer-cli/pix">Ver el repositorio</a>
+      <a class="btn primary" href="https://github.com/luisfer-cli/pix">abrir repo</a>
     </section>
   </main>
 
-  <footer>Hecho con <strong>pix</strong> · pixel art as code · <a href="https://github.com/luisfer-cli/pix">github.com/luisfer-cli/pix</a></footer>
+  <footer>
+    <span>© pix</span><span>·</span><span>pixel art as code</span><span>·</span><a href="https://github.com/luisfer-cli/pix">GitHub</a>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
