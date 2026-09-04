@@ -1,0 +1,62 @@
+canvas 32 32
+background transparent
+strict_palette true
+
+palette {
+    O #111827
+    N #1e1b4b
+    V #6d28d9
+    C #22d3ee
+    H #cffafe
+    P #fb7185
+    Y #fde047
+    W #fff7ed
+    SH #00000066
+}
+
+group shadow at 5 6 {
+    rect 0 0 24 24 SH
+}
+
+group badge at 3 3 {
+    rect 2 0 20 2 O
+    rect 0 2 24 20 O
+    rect 2 22 20 2 O
+    rect 2 2 20 20 V
+    rect 4 4 16 16 N
+    rect 4 4 16 2 C
+    rect 4 6 2 14 C
+    rect 18 6 2 14 P
+    rect 6 18 12 2 P
+    pixel 2 2 H
+    pixel 21 2 H
+    pixel 2 21 H
+    pixel 21 21 H
+}
+
+group letter_p at 9 10 {
+    rect 0 0 3 13 W
+    rect 3 0 5 3 W
+    rect 6 2 3 5 W
+    rect 3 6 5 3 W
+    pixel 3 3 Y
+    pixel 4 3 Y
+}
+
+group letter_x at 18 11 {
+    rect 0 0 2 3 Y
+    rect 5 0 2 3 Y
+    rect 2 3 3 3 Y
+    rect 0 6 2 3 Y
+    rect 5 6 2 3 Y
+    pixel 3 4 W
+}
+
+group sparkle at 1 1 {
+    pixel 0 3 Y
+    pixel 3 0 C
+    pixel 29 5 P
+    pixel 27 0 H
+    pixel 1 27 P
+    pixel 29 29 C
+}
