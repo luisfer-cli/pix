@@ -1,7 +1,8 @@
 use crate::ast::*;
 use crate::diagnostics::{Diagnostic, Span};
-use crate::lexer::{lex, Token, TokenKind};
+use crate::lexer::{Token, TokenKind, lex};
 
+type GroupBody = (String, i32, i32, Vec<Spanned<Item>>);
 type AnimationBody = (String, i32, Vec<AnimationFrame>);
 
 pub fn parse(src: &str) -> Result<Document, Diagnostic> {
@@ -127,7 +128,7 @@ impl Parser {
         self.rbrace()?;
         Ok(entries)
     }
-    fn group_body(&mut self) -> Result<(String, i32, i32, Vec<Spanned<Item>>), Diagnostic> {
+    fn group_body(&mut self) -> Result<GroupBody, Diagnostic> {
         let name = self.ident()?;
         let at = self.ident()?;
         if at != "at" {

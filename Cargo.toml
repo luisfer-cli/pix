@@ -2,6 +2,12 @@
 name = "pix"
 version = "0.1.0"
 edition = "2024"
+description = "Deterministic pixel-art DSL renderer and spritesheet exporter"
+license = "MIT"
+repository = "https://github.com/luisfer-cli/pix"
+readme = "README.md"
+keywords = ["pixel-art", "dsl", "spritesheet", "animation", "png"]
+categories = ["command-line-utilities", "graphics"]
 
 [dependencies]
 clap = { version = "4.5", features = ["derive"] }
